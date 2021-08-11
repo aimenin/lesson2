@@ -4,29 +4,29 @@ export type ScalarOperationType = (
 ) => number;
 
 export const add: ScalarOperationType = (
-  firstOperand: number,
-  secondOperand: number
-): number => firstOperand + secondOperand;
+  first: number,
+  second: number
+): number => first + second;
 
 export const minus: ScalarOperationType = (
-  firstOperand: number,
-  secondOperand: number
-): number => firstOperand - secondOperand;
+  first: number,
+  second: number
+): number => first - second;
 
 export const div: ScalarOperationType = (
-  firstOperand: number,
-  secondOperand: number
-): number => firstOperand / secondOperand;
+  first: number,
+  second: number
+): number => first / second;
 
 export const mul: ScalarOperationType = (
-  firstOperand: number,
-  secondOperand: number
-): number => firstOperand * secondOperand;
+  first: number,
+  second: number
+): number => first * second;
 
 export const pow: ScalarOperationType = (
-  firstOperand: number,
-  secondOperand: number
-): number => Math.pow(firstOperand, secondOperand);
+  first: number,
+  second: number
+): number => Math.pow(first, second);
 
 export const mathOperators: { [key: string]: ScalarOperationType } = {
   "*": mul,

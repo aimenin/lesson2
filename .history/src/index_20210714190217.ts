@@ -9,7 +9,7 @@ const rl = createInterface({
 
 const question = (): Promise<null> =>
   new Promise((resolve) => {
-    rl.question("Введите математическое выражение> ", (answer: string) => {
+    rl.question("> ", (answer: string) => {
       const result = runner(answer);
 
       if (result) {

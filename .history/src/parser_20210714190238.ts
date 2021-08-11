@@ -17,16 +17,12 @@ export const parser = (line: string): ParsedLineType | null => {
       !isNumber(item) &&
       mathOperators.hasOwnProperty(item);
 
-    try {
-      if (isValidNumberPush) {
-        result.push(Number(item));
-      } else if (isValidOperatorPush) {
-        result.push(item);
-      } else {
-        throw new TypeError("Unexpected string");
-      }
-    } catch (e) {
-      console.warn(e);
+    if (isValidNumberPush) {
+      result.push(Number(item));
+    } else if (isValidOperatorPush) {
+      result.push(item);
+    } else {
+      throw new TypeError("Unexpected string");
     }
   }
   return result;

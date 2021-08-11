@@ -4,10 +4,10 @@
   "description": "typescript calculation",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "test": "jest",
-    "lint": "eslint --ext .ts,.tsx --fix src/",
-    "calc": "ts-node src/"
+    "build": "npx webpack --mode production",
+    "test": "npx jest",
+    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/",
+    "calc": "npx ts-node src/"
   },
   "author": "aimenin",
   "license": "ISC",
